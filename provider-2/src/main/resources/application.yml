@@ -1,0 +1,7 @@
+rpc:
+  registry:
+    name: zookeeper
+    host: 127.0.0.1:2181
+  invoke: reflection
+  serialization: jdk
+  port: 8082

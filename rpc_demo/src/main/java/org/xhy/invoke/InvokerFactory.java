@@ -1,0 +1,22 @@
+package org.xhy.invoke;
+
+import org.xhy.common.constants.RpcInvoker;
+import org.xhy.spi.ExtensionLoader;
+
+import java.io.IOException;
+
+public class InvokerFactory {
+
+
+    public static Invoker get(RpcInvoker rpcInvoker){
+        return ExtensionLoader.getInstance().get(rpcInvoker.name);
+    }
+
+    public static Invoker get(String name){
+        return ExtensionLoader.getInstance().get(name);
+    }
+
+    public static void init() throws IOException, ClassNotFoundException {
+        ExtensionLoader.getInstance().loadExtension(Invoker.class);
+    }
+}

@@ -1,0 +1,2 @@
+failover=org.xhy.tolerant.FailoverFaultTolerantStrategy
+failFast=org.xhy.tolerant.FailFastFaultTolerantStrategy
